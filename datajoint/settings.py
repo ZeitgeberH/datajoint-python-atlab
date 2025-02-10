@@ -8,6 +8,7 @@ import pprint
 from collections import OrderedDict
 import logging
 import collections
+from collections.abc import MutableMapping
 from enum import Enum
 from .errors import DataJointError
 
@@ -59,7 +60,7 @@ log_levels = {
 }
 
 
-class Config(collections.MutableMapping):
+class Config(MutableMapping):
 
     instance = None
 
